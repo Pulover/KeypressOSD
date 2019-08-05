@@ -233,7 +233,9 @@ GetKeyStr() {
 
 		repeatCount := 1
 	}
-	return result ? result : prefix . key
+	vk := "VK" . GetKeyVK(key)
+	sc := "SC" . GetKeySC(key)
+	return result ? result : prefix . key . " | " . vk . " | " . sc
 }
 
 SpecialSC(sc) {
